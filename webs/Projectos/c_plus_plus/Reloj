@@ -1,0 +1,161 @@
+#include<iostream>
+#include<cstdlib>
+#include<windows.h>
+using namespace std;
+
+const int h = 24;
+const int m = 60;
+const int s = 60;
+
+class reloj
+{
+private:
+    int hora;
+    int minutos;
+    int segundos;
+    int formato;
+
+public:
+    reloj() {};
+    reloj(int&, int&, int&);
+    void mostrar_hora();
+    friend void ajustar_hora(reloj&);
+};
+
+int menu();
+
+int main()
+{
+    int opc;
+    reloj tiempo;
+
+    do {
+        opc = menu();
+
+        switch (opc)
+        {
+        case 1:
+        {
+            ajustar_hora(tiempo);
+
+            system("cls");
+            break;
+        }
+
+        case 2:
+        {
+            tiempo.mostrar_hora();
+
+            break;
+        }
+
+        case 3:
+        {
+            exit(0);
+            break;
+        }
+
+        default:
+        {
+            cout << "\n\n\t Opcion invalida" << endl;
+            cin.get(); cin.get();
+            system("cls");
+            break;
+        }
+        }
+    } while (opc != 3);
+
+    cin.get(); cin.get();
+    return 0;
+}
+
+reloj::reloj(int& hr, int& min, int& seg)
+{
+    hora = hr;
+    minutos = min;
+    segundos = seg;
+}
+
+int menu()
+{
+    int opc;
+
+    cout << "\n\n\t 1.- Ajustar hora" << endl;
+    cout << "\t 2.- Mostrar hora" << endl;
+    cout << "\t 3.- Salir" << endl;
+    cout << "\t indique opcion: ";
+    cin >> opc;
+
+    system("cls");
+    return opc;
+}
+
+void reloj::mostrar_hora()
+{
+    while (1)
+    {
+        while (hora < h)
+        {
+            while (minutos < m)
+            {
+                while (segundos < s)
+                {
+                    cout << "\n\n\t" << hora << ":" << minutos << ":" << segundos;
+
+                    Sleep(1000);
+                    system("cls");
+                    segundos += 1;
+                }
+                segundos = 0;
+                minutos += 1;
+            }
+            minutos = 0;
+            hora += 1;
+        }
+        hora = 0;
+    }
+}
+
+void ajustar_hora(reloj& tiempo)
+{
+    int hr, min, seg;
+
+    do {
+        cout << "\n\t Hora: ";
+        cin >> hr;
+
+        if (((hr < 0) || (hr > h)))
+        {
+            cout << "\n\t Hora invalida" << endl;
+            cin.get(); cin.get();
+            system("cls");
+        }
+    } while ((hr < 0) || (hr > h));
+
+    do {
+        cout << "\t Minutos: ";
+        cin >> min;
+
+        if (((min < 0) || (min > m)))
+        {
+            cout << "\n\t Minuto invalido" << endl;
+            cin.get(); cin.get();
+            system("cls");
+        }
+    } while ((min < 0) || (min > m));
+
+    do {
+        cout << "\t Segundos: ";
+        cin >> seg;
+
+        if (((seg < 0) || (seg > s)))
+        {
+            cout << "\n\t Segundoo invalido" << endl;
+            cin.get(); cin.get();
+            system("cls");
+        }
+    } while ((seg < 0) || (seg > s));
+
+    reloj temp(hr, min, seg);
+    tiempo = temp;
+}

@@ -1,0 +1,10 @@
+﻿  main.cpp
+C:\Users\Home\Documents\Projects\c_plus_plus\Project1\main.cpp(140,13): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Home\Documents\Projects\c_plus_plus\Project1\main.cpp(144,13): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Home\Documents\Projects\c_plus_plus\Project1\main.cpp(148,13): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Home\Documents\Projects\c_plus_plus\Project1\main.cpp(152,13): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Home\Documents\Projects\c_plus_plus\Project1\main.cpp(310,13): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Home\Documents\Projects\c_plus_plus\Project1\main.cpp(314,13): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Home\Documents\Projects\c_plus_plus\Project1\main.cpp(318,13): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Home\Documents\Projects\c_plus_plus\Project1\main.cpp(322,13): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+  Project1.vcxproj -> C:\Users\Home\Documents\Projects\c_plus_plus\Project1\x64\Debug\Project1.exe

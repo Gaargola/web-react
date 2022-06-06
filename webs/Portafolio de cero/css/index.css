@@ -1,0 +1,32 @@
+/*
+new function. i dean not have idea what be
+Nueva Funciones que no tengo ni idea que son
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+.barra{
+    position: absolute;
+    text-align: center;
+    border: 10px;
+    width: 100%;
+    height: 40px;
+    z-index: 10;
+    background: #3a3737;
+}
+.barra li{
+    list-style: none;
+    display:inline;
+    padding-left:4px;
+    padding-right:5px;
+}
+.barra a{
+    text-decoration: none;
+}
+.Paste{
+    position: fixed;
+    top: 0;
+}

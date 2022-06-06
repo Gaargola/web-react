@@ -1,0 +1,12 @@
+.containers{
+    display: flex;
+    margin: 20px;
+    justify-content: space-evenly;
+}
+.containers div{
+    margin: 20px;
+}
+.containers img{
+    height: 250px;
+    width: 250px;
+}
